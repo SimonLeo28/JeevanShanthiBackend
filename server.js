@@ -39,7 +39,7 @@ const contactLimiter = rateLimit({
 });
 
 app.use(limiter);
-app.use(express.json({ limit: '10kb' }));
+// app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // ─── Routes ───
