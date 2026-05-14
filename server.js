@@ -23,7 +23,7 @@ const app = express();
 // )
 app.use(
   cors({
-    origin: 'https://jeevan-shanthi-5z1jq1o57-simonleo28s-projects.vercel.app',
+    origin: 'https://www.jeevanshanthi.com/',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
