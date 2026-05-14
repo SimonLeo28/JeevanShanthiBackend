@@ -23,7 +23,7 @@ const app = express();
 // )
 app.use(
   cors({
-    origin: 'https://www.jeevanshanthi.com/',
+    origin: 'https://www.jeevanshanthi.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
