@@ -51,7 +51,8 @@ app.use(limiter);
 app.use(express.urlencoded({ extended: true }));
 
 // ─── Routes ───
-app.use('/api/contact', contactLimiter, contactRoutes);
+// app.use('/api/contact', contactLimiter, contactRoutes);
+app.use('/api/contact', contactRoutes);
 app.use('/api/leads', leadRoutes);
 app.use('/api/plans', planRoutes);
 
