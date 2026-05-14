@@ -22,6 +22,10 @@ app.use(
   })
 )
 
+app.options('*', cors())
+
+app.use(express.json())
+
 // ─── Rate Limiting ───
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
