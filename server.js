@@ -12,17 +12,25 @@ const planRoutes = require('./routes/planRoutes');
 const app = express();
 
 // ─── Security Middleware ───
-app.use(helmet());
+// app.use(helmet());
 // app.use(cors());
+// app.use(
+//   cors({
+//     origin: 'https://jeevan-shanthi-5z1jq1o57-simonleo28s-projects.vercel.app',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     credentials: true,
+//   })
+// )
 app.use(
   cors({
     origin: 'https://jeevan-shanthi-5z1jq1o57-simonleo28s-projects.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   })
 )
 
-app.options('*', cors())
+// app.options('*', cors())
 
 app.use(express.json())
 
