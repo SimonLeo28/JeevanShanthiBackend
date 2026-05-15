@@ -21,9 +21,24 @@ const app = express();
 //     credentials: true,
 //   })
 // )
+// app.use(
+//   cors({
+//     origin: 'https://www.jeevanshanthi.com',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     credentials: true,
+//   })
+// )
+
 app.use(
   cors({
-    origin: 'https://www.jeevanshanthi.com',
+    origin: [
+      'https://www.jeevanshanthi.com',
+      'https://jeevanshanthi.com',
+      'http://localhost:5173',
+      'http://localhost:3000',
+      'https://jeevan-shanthi-5z1jq1o57-simonleo28s-projects.vercel.app'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
